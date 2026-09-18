@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us — Arvion</title>
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-[#f4f7fb] font-sans antialiased text-navy-900">
+    <header class="sticky top-0 z-50 bg-white shadow-[0_1px_0_rgba(15,23,42,0.06)]">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-2 lg:px-10">
+        <a href="index.html" class="brand-logo-link shrink-0">
+          <img
+            src="assets/logo.png"
+            alt="Arvion — Learn. Lead. Transform."
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="hidden items-center gap-8 text-[15px] font-semibold text-navy-900 md:flex" aria-label="Primary">
+          <a href="index.html" class="transition-colors hover:text-navy-700">Home</a>
+          <a href="about.html" class="underline decoration-2 underline-offset-[10px]">About Us</a>
+          <a href="faq.html" class="transition-colors hover:text-navy-700">FAQ</a>
+          <a href="contact.html" class="transition-colors hover:text-navy-700">Contact</a>
+        </nav>
+
+        <a
+          href="index.html#enroll"
+          class="hidden rounded-full bg-navy-800 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-navy-900/20 transition hover:bg-navy-700 md:inline-flex"
+        >
+          Enroll Now
+        </a>
+
+        <button
+          id="menu-toggle"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-navy-900 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white px-5 py-4 md:hidden">
+        <nav class="flex flex-col gap-3 text-sm font-semibold text-navy-900" aria-label="Mobile">
+          <a href="index.html" class="py-1">Home</a>
+          <a href="about.html" class="py-1">About Us</a>
+          <a href="faq.html" class="py-1">FAQ</a>
+          <a href="contact.html" class="py-1">Contact</a>
+          <a
+            href="index.html#enroll"
+            class="mt-2 inline-flex items-center justify-center rounded-full bg-navy-800 px-6 py-2.5 text-white"
+          >
+            Enroll Now
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="scroll-mt-28 px-6 py-16 sm:py-20" aria-labelledby="about-heading">
+        <div class="mx-auto max-w-3xl text-center">
+          <h1 id="about-heading" class="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+            Who We Are
+          </h1>
+
+          <div class="mt-10 flex flex-col gap-2">
+            <img
+              src="assets/about/workshop.jpg"
+              alt="Arvion trainer leading a hands-on workshop with a team"
+              class="about-photo rounded-[1.25rem] sm:rounded-[1.75rem]"
+            />
+            <img
+              src="assets/about/conference.jpg"
+              alt="Professionals collaborating during an Arvion training session"
+              class="about-photo rounded-[1.25rem] sm:rounded-[1.75rem]"
+            />
+          </div>
+
+          <p class="mx-auto mt-8 max-w-2xl text-[15px] leading-relaxed text-slate-500">
+            Founded with the vision to bridge skill gaps on a global scale, Arvion is an independent, forward-thinking training provider committed to creating transformative learning experiences. We believe that education should not be limited by geography, industry, or learning barriers.
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-white px-6 py-16 sm:py-20" aria-labelledby="about-story">
+        <div class="mx-auto max-w-5xl">
+          <p id="about-story" class="mx-auto max-w-3xl text-center text-[15px] leading-relaxed text-slate-500">
+            Our network of certified, industry-experienced trainers spans continents and disciplines, ensuring learners gain access to world-class expertise, cutting-edge content, and real-world applications — wherever they are. We partner with individuals, businesses, and institutions to foster skills that fuel career growth, innovation, and organizational success.
+          </p>
+
+          <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <article class="rounded-[1.75rem] bg-white p-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100">
+              <img src="assets/about/collaboration.jpg" alt="Team collaborating around laptops" class="about-card-photo rounded-2xl" />
+              <h2 class="mt-5 text-xl font-extrabold text-navy-900">Team Collaboration</h2>
+              <p class="mt-2 text-[14px] leading-relaxed text-slate-500">
+                Our collaborative approach ensures that every training program is tailored to meet your specific needs and objectives.
+              </p>
+            </article>
+
+            <article class="rounded-[1.75rem] bg-white p-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100">
+              <img src="assets/about/global.jpg" alt="World map showing Arvion's global trainer network" class="about-card-photo rounded-2xl" />
+              <h2 class="mt-5 text-xl font-extrabold text-navy-900">Global Reach</h2>
+              <p class="mt-2 text-[14px] leading-relaxed text-slate-500">
+                With trainers spanning continents, we bring diverse perspectives and global best practices to every session.
+              </p>
+            </article>
+
+            <article class="rounded-[1.75rem] bg-white p-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100">
+              <img src="assets/about/experts.jpg" alt="Professional Arvion trainer" class="about-card-photo rounded-2xl" />
+              <h2 class="mt-5 text-xl font-extrabold text-navy-900">Expert Trainers</h2>
+              <p class="mt-2 text-[14px] leading-relaxed text-slate-500">
+                Learn from certified professionals with decades of real-world experience across various industries.
+              </p>
+            </article>
+
+            <article class="rounded-[1.75rem] bg-white p-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100">
+              <img src="assets/about/technology.jpg" alt="Technology used in Arvion training programs" class="about-card-photo rounded-2xl" />
+              <h2 class="mt-5 text-xl font-extrabold text-navy-900">Technology &amp; Innovation</h2>
+              <p class="mt-2 text-[14px] leading-relaxed text-slate-500">
+                Stay ahead with cutting-edge content and innovative learning methodologies that drive results.
+              </p>
+            </article>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <article id="mission" class="scroll-mt-28 rounded-[1.75rem] bg-[#2f6bff] px-8 py-8 text-white">
+              <h2 class="text-xl font-extrabold">Our Mission</h2>
+              <p class="mt-3 text-[14px] leading-relaxed text-white/90">
+                To empower professionals and organizations with knowledge, skills, and strategies that are impactful, accessible, and aligned with the future of work. We strive to make learning an engaging, inspiring, and results-driven journey.
+              </p>
+            </article>
+            <article class="rounded-[1.75rem] bg-[#7b4dff] px-8 py-8 text-white">
+              <h2 class="text-xl font-extrabold">Our Vision</h2>
+              <p class="mt-3 text-[14px] leading-relaxed text-white/90">
+                To be recognized as a global leader in professional training — setting the benchmark for quality, adaptability, and innovation, while nurturing a community of lifelong learners.
+              </p>
+            </article>
+          </div>
+
+          <div id="values" class="mt-16 scroll-mt-28">
+            <h2 class="text-center text-3xl font-extrabold tracking-tight text-navy-900">Our Values</h2>
+            <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+              <article class="rounded-2xl bg-[#f4f7fb] px-4 py-6 text-center">
+                <h3 class="font-extrabold text-navy-900">Excellence</h3>
+                <p class="mt-2 text-[13px] leading-relaxed text-slate-500">Delivering the highest quality in every training we offer.</p>
+              </article>
+              <article class="rounded-2xl bg-[#f4f7fb] px-4 py-6 text-center">
+                <h3 class="font-extrabold text-navy-900">Integrity</h3>
+                <p class="mt-2 text-[13px] leading-relaxed text-slate-500">Building trust through transparency and ethical practices.</p>
+              </article>
+              <article class="rounded-2xl bg-[#f4f7fb] px-4 py-6 text-center">
+                <h3 class="font-extrabold text-navy-900">Innovation</h3>
+                <p class="mt-2 text-[13px] leading-relaxed text-slate-500">Adapting and evolving with emerging trends and technologies.</p>
+              </article>
+              <article class="rounded-2xl bg-[#f4f7fb] px-4 py-6 text-center">
+                <h3 class="font-extrabold text-navy-900">Collaboration</h3>
+                <p class="mt-2 text-[13px] leading-relaxed text-slate-500">Partnering with clients and trainers to co-create success.</p>
+              </article>
+              <article class="rounded-2xl bg-[#f4f7fb] px-4 py-6 text-center">
+                <h3 class="font-extrabold text-navy-900">Impact</h3>
+                <p class="mt-2 text-[13px] leading-relaxed text-slate-500">Driving measurable improvements in skills, confidence, and performance.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="mt-16 rounded-[1.75rem] bg-[#f4f7fb] px-6 py-10 sm:px-10">
+            <h2 class="text-center text-3xl font-extrabold tracking-tight text-navy-900">Our Edge</h2>
+            <ul class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-x-10 gap-y-5 text-[14px] leading-relaxed text-slate-500 sm:grid-cols-2 lg:grid-cols-3">
+              <li class="flex gap-2.5">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4f7df3]"></span>
+                <span><span class="font-semibold text-navy-900">Global Training Delivery</span> — Programs available both online and onsite, accessible worldwide.</span>
+              </li>
+              <li class="flex gap-2.5">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4f7df3]"></span>
+                <span><span class="font-semibold text-navy-900">Industry-Relevant, Fast-Moving Courses</span> — Content designed to meet workplace demands.</span>
+              </li>
+              <li class="flex gap-2.5">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4f7df3]"></span>
+                <span><span class="font-semibold text-navy-900">Self-Certified Learning Credits</span> — Formal accreditation in progress.</span>
+              </li>
+              <li class="flex gap-2.5">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4f7df3]"></span>
+                <span><span class="font-semibold text-navy-900">Customized Corporate Solutions</span> — Tailored programs for business needs.</span>
+              </li>
+              <li class="flex gap-2.5">
+                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4f7df3]"></span>
+                <span><span class="font-semibold text-navy-900">Diverse Trainer Network</span> — Trainers from multiple industries with local and global perspectives.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white px-6 py-16 sm:py-20" aria-labelledby="why-heading">
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 id="why-heading" class="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+            Why Choose Us
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-slate-500">
+            At Arvion, we don't just deliver training — we create transformations. Our programs are built to inspire action, spark innovation, and produce measurable results. Every course is carefully designed to be practical, engaging, and relevant to real workplace challenges.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <p class="rounded-2xl bg-white px-5 py-3 text-[13px] font-medium text-navy-900 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100">
+              Blend global and local expertise.
+            </p>
+            <p class="rounded-2xl bg-white px-5 py-3 text-[13px] font-medium text-navy-900 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100">
+              Customize for impact.
+            </p>
+            <p class="rounded-2xl bg-white px-5 py-3 text-[13px] font-medium text-navy-900 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100">
+              Stay ahead of trends.
+            </p>
+            <p class="rounded-2xl bg-white px-5 py-3 text-[13px] font-medium text-navy-900 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100">
+              Value your time.
+            </p>
+            <p class="rounded-2xl bg-white px-5 py-3 text-[13px] font-medium text-navy-900 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100">
+              Focus on results.
+            </p>
+          </div>
+
+          <p class="mx-auto mt-10 max-w-xl text-[15px] leading-relaxed text-slate-500">
+            When you choose Arvion, you choose a partner in your professional journey — committed to your growth long after the course ends.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#15284d] text-white">
+      <div class="mx-auto max-w-7xl px-6 pt-16 pb-10 lg:px-10">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.7fr_0.95fr_0.7fr] lg:gap-8">
+          <div>
+            <a href="index.html" class="inline-flex rounded-2xl bg-white px-3 py-2">
+              <img src="assets/logo.png" alt="Arvion" class="footer-logo" />
+            </a>
+            <p class="mt-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#c9a227]">
+              Learn. Lead. Transform.
+            </p>
+            <p class="mt-4 max-w-xs text-[14px] leading-relaxed text-slate-300">
+              Empowering professionals and organizations with transformative learning experiences. We bridge skill gaps globally through world-class training and innovative solutions.
+            </p>
+          </div>
+
+          <nav aria-label="Company">
+            <p class="text-sm font-semibold text-white">Company</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
+              <li><a href="about.html" class="transition-colors hover:text-white">About Us</a></li>
+              <li><a href="#mission" class="transition-colors hover:text-white">Our Mission</a></li>
+              <li><a href="#values" class="transition-colors hover:text-white">Our Values</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Programs">
+            <p class="text-sm font-semibold text-white">Programs</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="index.html#corporate" class="transition-colors hover:text-white">Corporate Training</a></li>
+              <li><a href="index.html#leadership" class="transition-colors hover:text-white">Leadership Programs</a></li>
+              <li><a href="index.html#technology" class="transition-colors hover:text-white">Technology Training</a></li>
+              <li><a href="index.html#soft-skills" class="transition-colors hover:text-white">Soft Skills</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Support">
+            <p class="text-sm font-semibold text-white">Support</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="faq.html" class="transition-colors hover:text-white">FAQ</a></li>
+              <li><a href="contact.html" class="transition-colors hover:text-white">Contact Us</a></li>
+              <li><a href="mailto:hello@arvion.com" class="transition-colors hover:text-white">Enroll Now</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="mt-12 overflow-hidden rounded-[1.5rem] bg-[#1c335f] lg:grid lg:grid-cols-[0.95fr_1.15fr]">
+          <div class="flex flex-col justify-center gap-6 px-6 py-7 sm:px-8">
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" />
+                  <circle cx="12" cy="10" r="2.4" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Location</p>
+                <p class="mt-1 text-[14px] text-white">Training worldwide · 50+ countries</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4V6Zm0 0 8 7 8-7" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Email</p>
+                <a href="mailto:hello@arvion.com" class="mt-1 inline-block text-[14px] text-white transition-colors hover:text-slate-200">hello@arvion.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5c1.5 7 7 12.5 14 14l2.2-2.2a1.5 1.5 0 0 0-.1-2.2l-2.6-2a1.5 1.5 0 0 0-1.7 0l-1.1.8a11.2 11.2 0 0 1-5-5l.8-1.1a1.5 1.5 0 0 0 0-1.7l-2-2.6a1.5 1.5 0 0 0-2.2-.1L3.5 6.5Z" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Talk to us</p>
+                <p class="mt-1 text-[14px] text-white">Online, onsite, and hybrid programs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="assets/about/global.jpg"
+              alt="World map showing where Arvion delivers training"
+              class="footer-map"
+            />
+            <span class="absolute bottom-4 left-4 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-900 shadow-md">
+              Global trainer network
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10">
+        <p class="mx-auto max-w-7xl px-6 py-5 text-xs text-slate-400 lg:px-10">
+          © 2026 Arvion. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      toggle.addEventListener("click", () => {
+        const open = menu.classList.toggle("hidden") === false;
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        iconOpen.classList.toggle("hidden", open);
+        iconClose.classList.toggle("hidden", !open);
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

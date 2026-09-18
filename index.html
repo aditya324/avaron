@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arvion — Learn. Lead. Transform.</title>
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      try {
+        if (localStorage.getItem("arvion-intro-seen") === "1") {
+          document.documentElement.classList.add("intro-seen");
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="intro-active bg-white font-sans antialiased text-navy-900">
+    <div id="intro-loader" class="intro-loader" role="dialog" aria-label="Arvion intro" aria-live="polite">
+      <button type="button" id="skip-intro" class="intro-skip">Skip Intro</button>
+      <video
+        id="intro-video"
+        class="intro-video"
+        muted
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source src="assets/video/Splash.mp4" type="video/mp4" />
+      </video>
+      <div class="intro-logo-wrap" aria-hidden="true">
+        <img src="assets/logo.png" alt="Arvion" class="intro-logo" />
+        <p class="intro-tagline">Learn. Lead. Transform.</p>
+      </div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white shadow-[0_1px_0_rgba(15,23,42,0.06)]">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-2 lg:px-10">
+        <a href="#home" class="brand-logo-link shrink-0">
+          <img
+            src="assets/logo.png"
+            alt="Arvion — Learn. Lead. Transform."
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="hidden items-center gap-8 text-[15px] font-semibold text-navy-900 md:flex" aria-label="Primary">
+          <a href="#home" class="underline decoration-2 underline-offset-[10px]">Home</a>
+          <a href="about.html" class="transition-colors hover:text-navy-700">About Us</a>
+          <a href="faq.html" class="transition-colors hover:text-navy-700">FAQ</a>
+          <a href="contact.html" class="transition-colors hover:text-navy-700">Contact</a>
+        </nav>
+
+        <a
+          href="#enroll"
+          class="hidden rounded-full bg-navy-800 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-navy-900/20 transition hover:bg-navy-700 md:inline-flex"
+        >
+          Enroll Now
+        </a>
+
+        <button
+          id="menu-toggle"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-navy-900 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white px-5 py-4 md:hidden">
+        <nav class="flex flex-col gap-3 text-sm font-semibold text-navy-900" aria-label="Mobile">
+          <a href="#home" class="py-1">Home</a>
+          <a href="about.html" class="py-1">About Us</a>
+          <a href="faq.html" class="py-1">FAQ</a>
+          <a href="contact.html" class="py-1">Contact</a>
+          <a
+            href="#enroll"
+            class="mt-2 inline-flex items-center justify-center rounded-full bg-navy-800 px-6 py-2.5 text-white"
+          >
+            Enroll Now
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="relative min-h-[calc(100vh-5.5rem)] overflow-hidden">
+      <video
+        id="hero-video"
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="assets/hero.jpg"
+        aria-hidden="true"
+      >
+        <source src="assets/video/20250815_153652_0004.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 z-[1] bg-[#1a2744]/45"></div>
+
+      <div class="relative z-10 mx-auto flex min-h-[calc(100vh-5.5rem)] max-w-5xl flex-col px-6 py-12 text-center">
+        <div class="flex flex-1 flex-col items-center justify-center">
+          <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            Skill that leads to<br class="hidden sm:block" />
+            success
+          </h1>
+
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="about.html"
+              class="inline-flex min-w-[140px] items-center justify-center rounded-full bg-navy-800 px-8 py-3 text-base font-semibold text-white shadow-lg shadow-black/20 transition hover:bg-navy-700"
+            >
+              Explore
+            </a>
+            <a
+              href="contact.html"
+              class="inline-flex min-w-[140px] items-center justify-center rounded-full border border-white/35 bg-white/20 px-8 py-3 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/30"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+
+        <dl class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6">
+          <div>
+            <dt class="sr-only">Global Trainers</dt>
+            <dd class="text-3xl font-bold text-[#6d8ec4] md:text-4xl">500+</dd>
+            <p class="mt-1 text-sm font-medium text-slate-300">Global Trainers</p>
+          </div>
+          <div>
+            <dt class="sr-only">Professionals Trained</dt>
+            <dd class="text-3xl font-bold text-[#6d8ec4] md:text-4xl">10K+</dd>
+            <p class="mt-1 text-sm font-medium text-slate-300">Professionals Trained</p>
+          </div>
+          <div>
+            <dt class="sr-only">Countries Served</dt>
+            <dd class="text-3xl font-bold text-[#6d8ec4] md:text-4xl">50+</dd>
+            <p class="mt-1 text-sm font-medium text-slate-300">Countries Served</p>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="trusted" class="overflow-hidden bg-[#f4f7fb] py-16 sm:py-20" aria-labelledby="trusted-heading">
+      <div class="mx-auto max-w-5xl px-6 text-center">
+        <h2 id="trusted-heading" class="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+          Trusted by Industry Leaders
+        </h2>
+        <p class="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-slate-500">
+          Join thousands of professionals from top companies who trust Arvion for their training needs
+        </p>
+      </div>
+
+      <div class="relative mt-10">
+        <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-[#f4f7fb] to-transparent sm:w-16"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-[#f4f7fb] to-transparent sm:w-16"></div>
+
+        <div id="logo-carousel" class="overflow-hidden" aria-label="Partner logos">
+          <div id="logo-track" class="flex w-max gap-5 px-6 sm:gap-6">
+            <article class="flex h-[148px] w-[240px] shrink-0 flex-col items-center justify-center rounded-2xl bg-white px-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <img src="assets/logos/microsoft.svg" alt="Microsoft" class="partner-logo" />
+              <p class="mt-3 text-sm text-slate-400">Microsoft</p>
+            </article>
+            <article class="flex h-[148px] w-[240px] shrink-0 flex-col items-center justify-center rounded-2xl bg-white px-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <img src="assets/logos/google.svg" alt="Google" class="partner-logo" />
+              <p class="mt-3 text-sm text-slate-400">Google</p>
+            </article>
+            <article class="flex h-[148px] w-[240px] shrink-0 flex-col items-center justify-center rounded-2xl bg-white px-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <img src="assets/logos/amazon.svg" alt="Amazon" class="partner-logo" />
+              <p class="mt-3 text-sm text-slate-400">Amazon</p>
+            </article>
+            <article class="flex h-[148px] w-[240px] shrink-0 flex-col items-center justify-center rounded-2xl bg-white px-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <img src="assets/logos/apple.svg" alt="Apple" class="partner-logo" />
+              <p class="mt-3 text-sm text-slate-400">Apple</p>
+            </article>
+            <article class="flex h-[148px] w-[240px] shrink-0 flex-col items-center justify-center rounded-2xl bg-white px-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <img src="assets/logos/meta.svg" alt="Meta" class="partner-logo" />
+              <p class="mt-3 text-sm text-slate-400">Meta</p>
+            </article>
+            <article class="flex h-[148px] w-[240px] shrink-0 flex-col items-center justify-center rounded-2xl bg-white px-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <img src="assets/logos/ibm.svg" alt="IBM" class="partner-logo" />
+              <p class="mt-3 text-sm text-slate-400">IBM</p>
+            </article>
+            <article class="flex h-[148px] w-[240px] shrink-0 flex-col items-center justify-center rounded-2xl bg-white px-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <img src="assets/logos/netflix.svg" alt="Netflix" class="partner-logo" />
+              <p class="mt-3 text-sm text-slate-400">Netflix</p>
+            </article>
+            <article class="flex h-[148px] w-[240px] shrink-0 flex-col items-center justify-center rounded-2xl bg-white px-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <img src="assets/logos/salesforce.svg" alt="Salesforce" class="partner-logo" />
+              <p class="mt-3 text-sm text-slate-400">Salesforce</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-8 text-center text-xs text-slate-400">*Representative of the types of organizations we serve</p>
+    </section>
+
+    <section id="programs" class="scroll-mt-28 bg-white py-16 sm:py-24" aria-labelledby="programs-heading">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 id="programs-heading" class="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+            Our Training Programs
+          </h2>
+          <p class="mx-auto mt-3 max-w-2xl text-[15px] leading-relaxed text-slate-500">
+            Comprehensive training solutions designed to bridge skill gaps and accelerate professional growth across all levels.
+          </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article id="corporate" class="flex h-full scroll-mt-28 flex-col rounded-[1.75rem] bg-[#eef3fb] px-7 py-8">
+            <svg class="h-9 w-9 text-[#7d8dad]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 21V9h6V4h12v17H3Zm2-2h4v-5H5v5Zm6 0h4v-5h-4v5Zm6 0h4V6h-8v3h4v10ZM5 12h4V11H5v1Zm6 0h4v-1h-4v1Z" />
+            </svg>
+            <h3 class="mt-5 text-[1.35rem] font-extrabold leading-snug text-navy-900">Corporate Training</h3>
+            <p class="mt-3 text-[14px] leading-relaxed text-slate-500">
+              Tailored programs designed to meet your organization's specific goals, industry requirements, and employee skill needs.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-[13px] font-medium text-navy-900">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#4f7df3]"></span>
+                Customized Solutions
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#4f7df3]"></span>
+                Industry-Specific Content
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#4f7df3]"></span>
+                Flexible Delivery
+              </li>
+            </ul>
+          </article>
+
+          <article id="leadership" class="flex h-full scroll-mt-28 flex-col rounded-[1.75rem] bg-[#eef3fb] px-7 py-8">
+            <svg class="h-9 w-9 text-[#6a3d9a]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm8.2 1.2a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM1.8 19.8c.4-3.4 3.1-5.6 6.7-5.6s6.3 2.2 6.7 5.6v.7H1.8v-.7Zm10.9 0c.3-2.6 1.7-4.5 3.8-5.3 1.1.4 2 .9 2.7 1.7.9 1 1.4 2.3 1.6 3.6v.7h-8.1v-.7Z" />
+            </svg>
+            <h3 class="mt-5 text-[1.35rem] font-extrabold leading-snug text-navy-900">Leadership Programs</h3>
+            <p class="mt-3 text-[14px] leading-relaxed text-slate-500">
+              Develop essential leadership skills and strategies that drive organizational success and team performance.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-[13px] font-medium text-navy-900">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#6a3d9a]"></span>
+                Strategic Thinking
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#6a3d9a]"></span>
+                Team Management
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#6a3d9a]"></span>
+                Decision Making
+              </li>
+            </ul>
+          </article>
+
+          <article id="technology" class="flex h-full scroll-mt-28 flex-col rounded-[1.75rem] bg-[#eef3fb] px-7 py-8">
+            <svg class="h-9 w-9 text-[#1f9e98]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5V15H3V5.5ZM2 17h20v1.2c0 .7-.6 1.3-1.6 1.3H3.6c-.9 0-1.6-.6-1.6-1.3V17Z" />
+              <path d="M5.2 5.4h13.6v8.2H5.2V5.4Z" fill="#eef3fb" />
+            </svg>
+            <h3 class="mt-5 text-[1.35rem] font-extrabold leading-snug text-navy-900">Technology Training</h3>
+            <p class="mt-3 text-[14px] leading-relaxed text-slate-500">
+              Stay ahead with cutting-edge technology training and innovative learning methodologies that drive results.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-[13px] font-medium text-navy-900">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#1f9e98]"></span>
+                Latest Technologies
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#1f9e98]"></span>
+                Practical Applications
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#1f9e98]"></span>
+                Hands-on Learning
+              </li>
+            </ul>
+          </article>
+
+          <article id="soft-skills" class="flex h-full scroll-mt-28 flex-col rounded-[1.75rem] bg-[#eef3fb] px-7 py-8">
+            <svg class="h-9 w-9 text-[#e0b12a]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8.1 10.2c.9-1 2.3-1.5 3.6-1.3.6-1.4 2-2.3 3.6-2.3 1.3 0 2.5.6 3.2 1.6.8-.4 1.7-.5 2.6-.2l-1 2.1c-.4-.1-.8 0-1.1.2L17.4 12l.9.9c.7.7.7 1.8 0 2.5l-5.2 5.3c-.6.6-1.6.6-2.2 0l-5.3-5.4c-.7-.7-.7-1.8 0-2.5l.9-.9-1.4-1.1c-.4-.3-.9-.3-1.3-.2l-1-2.1c.9-.4 1.9-.3 2.7.1.7-1 1.9-1.6 3.2-1.6 1.2 0 2.2.5 2.9 1.3-.8.1-1.6.5-2.2 1.1l-.3.3Z" />
+            </svg>
+            <h3 class="mt-5 text-[1.35rem] font-extrabold leading-snug text-navy-900">Soft Skills</h3>
+            <p class="mt-3 text-[14px] leading-relaxed text-slate-500">
+              Enhance communication, collaboration, and interpersonal skills essential for professional success.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-[13px] font-medium text-navy-900">
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#e0b12a]"></span>
+                Communication
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#e0b12a]"></span>
+                Collaboration
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[#e0b12a]"></span>
+                Problem Solving
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="trainers" class="scroll-mt-28 bg-[#243b6b] py-16 sm:py-24" aria-labelledby="trainers-heading">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 id="trainers-heading" class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            Meet Our Expert Trainers
+          </h2>
+          <p class="mx-auto mt-3 max-w-2xl text-[15px] leading-relaxed text-slate-300">
+            Learn from industry veterans and academic experts with decades of real-world experience
+          </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="flex h-full flex-col rounded-[1.75rem] bg-[#334e7a] px-6 py-8 text-center">
+            <img
+              src="assets/trainers/sarah.jpg"
+              alt="Dr. Sarah Williams"
+              class="trainer-photo mx-auto"
+            />
+            <h3 class="mt-5 text-lg font-extrabold text-white">Dr. Sarah Williams</h3>
+            <p class="mt-1 text-sm font-medium text-[#9eb4d8]">Leadership &amp; Strategy</p>
+            <p class="mt-4 text-[13px] leading-relaxed text-slate-300">
+              15+ years Experience<br />
+              PhD, Harvard Business School
+            </p>
+            <p class="mt-5 text-left text-[13px] font-semibold text-white">Specialties:</p>
+            <ul class="mt-2 space-y-1.5 text-left text-[13px] text-slate-300">
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Executive Coaching</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Change Management</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Strategic Planning</li>
+            </ul>
+          </article>
+
+          <article class="flex h-full flex-col rounded-[1.75rem] bg-[#334e7a] px-6 py-8 text-center">
+            <img
+              src="assets/trainers/michael.jpg"
+              alt="Michael Rodriguez"
+              class="trainer-photo mx-auto"
+            />
+            <h3 class="mt-5 text-lg font-extrabold text-white">Michael Rodriguez</h3>
+            <p class="mt-1 text-sm font-medium text-[#9eb4d8]">Technology &amp; Innovation</p>
+            <p class="mt-4 text-[13px] leading-relaxed text-slate-300">
+              12+ years Experience<br />
+              MSc Computer Science, Stanford
+            </p>
+            <p class="mt-5 text-left text-[13px] font-semibold text-white">Specialties:</p>
+            <ul class="mt-2 space-y-1.5 text-left text-[13px] text-slate-300">
+              <li class="flex gap-2"><span class="text-slate-400">•</span> AI/ML</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Digital Transformation</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Agile Methodologies</li>
+            </ul>
+          </article>
+
+          <article class="flex h-full flex-col rounded-[1.75rem] bg-[#334e7a] px-6 py-8 text-center">
+            <img
+              src="assets/trainers/emily.jpg"
+              alt="Dr. Emily Chen"
+              class="trainer-photo mx-auto"
+            />
+            <h3 class="mt-5 text-lg font-extrabold text-white">Dr. Emily Chen</h3>
+            <p class="mt-1 text-sm font-medium text-[#9eb4d8]">Communication &amp; Soft Skills</p>
+            <p class="mt-4 text-[13px] leading-relaxed text-slate-300">
+              18+ years Experience<br />
+              PhD Psychology, Yale University
+            </p>
+            <p class="mt-5 text-left text-[13px] font-semibold text-white">Specialties:</p>
+            <ul class="mt-2 space-y-1.5 text-left text-[13px] text-slate-300">
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Public Speaking</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Team Dynamics</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Conflict Resolution</li>
+            </ul>
+          </article>
+
+          <article class="flex h-full flex-col rounded-[1.75rem] bg-[#334e7a] px-6 py-8 text-center">
+            <img
+              src="assets/trainers/james.jpg"
+              alt="James Thompson"
+              class="trainer-photo mx-auto"
+            />
+            <h3 class="mt-5 text-lg font-extrabold text-white">James Thompson</h3>
+            <p class="mt-1 text-sm font-medium text-[#9eb4d8]">Sales &amp; Business Development</p>
+            <p class="mt-4 text-[13px] leading-relaxed text-slate-300">
+              20+ years Experience<br />
+              MBA, Wharton School
+            </p>
+            <p class="mt-5 text-left text-[13px] font-semibold text-white">Specialties:</p>
+            <ul class="mt-2 space-y-1.5 text-left text-[13px] text-slate-300">
+              <li class="flex gap-2"><span class="text-slate-400">•</span> B2B Sales</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Negotiation</li>
+              <li class="flex gap-2"><span class="text-slate-400">•</span> Market Strategy</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="mt-12 flex justify-center">
+          <div class="inline-flex items-center gap-3 rounded-full bg-[#1a2f56] px-6 py-3 text-left shadow-lg shadow-black/20">
+            <svg class="h-8 w-8 shrink-0 text-[#6d8ec4]" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.6" />
+              <ellipse cx="16" cy="16" rx="6" ry="13" stroke="currentColor" stroke-width="1.6" />
+              <path d="M4 16h24M7 10h18M7 22h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            <div>
+              <p class="text-sm font-semibold text-white">500+ Global Trainers</p>
+              <p class="text-xs text-slate-400">Across 50+ Countries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="scroll-mt-28 bg-white py-16 sm:py-24" aria-labelledby="testimonials-heading">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 id="testimonials-heading" class="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+            What Our Clients Say
+          </h2>
+          <p class="mx-auto mt-3 max-w-2xl text-[15px] leading-relaxed text-slate-500">
+            Don't just take our word for it. Here's what professionals and organizations say about their Arvion experience.
+          </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <figure class="flex h-full flex-col rounded-[1.75rem] bg-[#eef3fb] px-6 py-7">
+            <figcaption>
+              <p class="font-extrabold text-navy-900">Sarah Johnson</p>
+              <p class="mt-0.5 text-sm text-slate-500">Senior Manager</p>
+            </figcaption>
+            <div class="mt-3 flex gap-1 text-[#e8b923]" aria-label="5 out of 5 stars">
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+            </div>
+            <blockquote class="mt-4 text-[14px] leading-relaxed text-slate-500">
+              “Arvion's leadership training transformed our team dynamics. The practical approach and real-world applications made all the difference.”
+            </blockquote>
+          </figure>
+
+          <figure class="flex h-full flex-col rounded-[1.75rem] bg-[#eef3fb] px-6 py-7">
+            <figcaption>
+              <p class="font-extrabold text-navy-900">Michael Chen</p>
+              <p class="mt-0.5 text-sm text-slate-500">Product Director</p>
+            </figcaption>
+            <div class="mt-3 flex gap-1 text-[#e8b923]" aria-label="5 out of 5 stars">
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+            </div>
+            <blockquote class="mt-4 text-[14px] leading-relaxed text-slate-500">
+              “The technology training was exceptional. Our team gained cutting-edge skills that immediately improved our project delivery.”
+            </blockquote>
+          </figure>
+
+          <figure class="flex h-full flex-col rounded-[1.75rem] bg-[#eef3fb] px-6 py-7">
+            <figcaption>
+              <p class="font-extrabold text-navy-900">Emily Rodriguez</p>
+              <p class="mt-0.5 text-sm text-slate-500">HR Director</p>
+            </figcaption>
+            <div class="mt-3 flex gap-1 text-[#e8b923]" aria-label="5 out of 5 stars">
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+            </div>
+            <blockquote class="mt-4 text-[14px] leading-relaxed text-slate-500">
+              “Outstanding soft skills training that helped our employees communicate better and work more effectively as a team.”
+            </blockquote>
+          </figure>
+
+          <figure class="flex h-full flex-col rounded-[1.75rem] bg-[#eef3fb] px-6 py-7">
+            <figcaption>
+              <p class="font-extrabold text-navy-900">David Thompson</p>
+              <p class="mt-0.5 text-sm text-slate-500">CEO</p>
+            </figcaption>
+            <div class="mt-3 flex gap-1 text-[#e8b923]" aria-label="5 out of 5 stars">
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+              <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" /></svg>
+            </div>
+            <blockquote class="mt-4 text-[14px] leading-relaxed text-slate-500">
+              “Arvion's customized corporate training exceeded our expectations. The ROI was immediate and measurable.”
+            </blockquote>
+          </figure>
+        </div>
+
+        <div class="mt-10 flex justify-center">
+          <p class="inline-flex items-center gap-2 rounded-full bg-[#d8f5d4] px-5 py-2.5 text-sm font-semibold text-navy-900">
+            <svg class="h-4 w-4 text-[#e8b923]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 1.6 12.4 6.7l5.6.8-4 3.9.9 5.6L10 14.4 4.9 17l.9-5.6-4-3.9 5.6-.8L10 1.6Z" />
+            </svg>
+            4.9/5 Average Rating
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="scroll-mt-28 bg-[#f4f7fb] py-16 sm:py-24" aria-labelledby="faq-heading">
+      <div class="mx-auto max-w-3xl px-6">
+        <div class="text-center">
+          <h2 id="faq-heading" class="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <p class="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-slate-500">
+            Get quick answers to common questions about our training programs and services.
+          </p>
+        </div>
+
+        <div id="faq-list" class="mt-10 flex flex-col gap-3">
+          <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+              What training programs does Arvion offer?
+              <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+              Arvion offers Corporate Training, Leadership Programs, Technology Training, and Soft Skills development. Each track can be tailored to your industry, team size, and goals.
+            </p>
+          </details>
+
+          <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+              Can programs be customized for our organization?
+              <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+              Yes. We design programs around your specific goals, industry requirements, and employee skill needs — including custom content, flexible delivery, and on-site or virtual formats.
+            </p>
+          </details>
+
+          <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+              How are training sessions delivered?
+              <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+              Sessions are available in person, virtually, or as a hybrid. Your team can learn together in one office or across locations, with the same practical, hands-on approach.
+            </p>
+          </details>
+
+          <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+              Who are Arvion's trainers?
+              <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+              Our network includes 500+ global trainers — industry veterans and academic experts with decades of real-world experience across leadership, technology, communication, and sales.
+            </p>
+          </details>
+
+          <details class="faq-item faq-extra group hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+              How do we enroll or request a program?
+              <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+              Click Enroll Now or Contact Us. Our team will help you choose a track, scope a custom program, and schedule delivery for your team.
+            </p>
+          </details>
+
+          <details class="faq-item faq-extra group hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+              How long do programs typically last?
+              <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+              Most workshops run from one intensive day to several weeks. Duration depends on the topic, cohort size, and whether you want a short sprint or a longer learning path.
+            </p>
+          </details>
+
+          <details class="faq-item faq-extra group hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+              Do you train teams in multiple countries?
+              <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+              Yes. Arvion serves organizations in 50+ countries. We can deliver locally, remotely, or as a coordinated program across offices.
+            </p>
+          </details>
+
+          <details class="faq-item faq-extra group hidden rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+              What is Arvion's cancellation and refund policy?
+              <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+              Programs can be rescheduled with at least 7 days' notice. Cancellations more than 14 days before the start date are eligible for a full refund; later cancellations may receive credit toward a future program. Terms are confirmed in your agreement.
+            </p>
+          </details>
+        </div>
+
+        <div class="mt-8 rounded-[1.75rem] bg-gradient-to-r from-[#2f6bff] to-[#7b4dff] px-6 py-10 text-center text-white">
+          <h3 class="text-xl font-extrabold">Still Have Questions?</h3>
+          <p class="mx-auto mt-2 max-w-lg text-[14px] leading-relaxed text-white/85">
+            Can't find the answer you're looking for? Our support team is here to help you with any specific questions about our training programs.
+          </p>
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="faq.html"
+              class="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-navy-900 shadow-md transition hover:bg-slate-100"
+            >
+              View All FAQs
+            </a>
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center rounded-full border border-white/80 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#15284d] text-white">
+      <div class="mx-auto max-w-7xl px-6 pt-16 pb-10 lg:px-10">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.7fr_0.95fr_0.7fr] lg:gap-8">
+          <div>
+            <a href="#home" class="inline-flex rounded-2xl bg-white px-3 py-2">
+              <img src="assets/logo.png" alt="Arvion" class="footer-logo" />
+            </a>
+            <p class="mt-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#c9a227]">
+              Learn. Lead. Transform.
+            </p>
+            <p class="mt-4 max-w-xs text-[14px] leading-relaxed text-slate-300">
+              Empowering professionals and organizations with transformative learning experiences. We bridge skill gaps globally through world-class training and innovative solutions.
+            </p>
+          </div>
+
+          <nav aria-label="Company">
+            <p class="text-sm font-semibold text-white">Company</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="#home" class="transition-colors hover:text-white">Home</a></li>
+              <li><a href="about.html" class="transition-colors hover:text-white">About Us</a></li>
+              <li><a href="about.html#mission" class="transition-colors hover:text-white">Our Mission</a></li>
+              <li><a href="about.html#values" class="transition-colors hover:text-white">Our Values</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Programs">
+            <p class="text-sm font-semibold text-white">Programs</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="#corporate" class="transition-colors hover:text-white">Corporate Training</a></li>
+              <li><a href="#leadership" class="transition-colors hover:text-white">Leadership Programs</a></li>
+              <li><a href="#technology" class="transition-colors hover:text-white">Technology Training</a></li>
+              <li><a href="#soft-skills" class="transition-colors hover:text-white">Soft Skills</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Support">
+            <p class="text-sm font-semibold text-white">Support</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="faq.html" class="transition-colors hover:text-white">FAQ</a></li>
+              <li><a href="contact.html" class="transition-colors hover:text-white">Contact Us</a></li>
+              <li><a href="mailto:hello@arvion.com" class="transition-colors hover:text-white">Enroll Now</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="mt-12 overflow-hidden rounded-[1.5rem] bg-[#1c335f] lg:grid lg:grid-cols-[0.95fr_1.15fr]">
+          <div class="flex flex-col justify-center gap-6 px-6 py-7 sm:px-8">
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" />
+                  <circle cx="12" cy="10" r="2.4" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Location</p>
+                <p class="mt-1 text-[14px] text-white">Training worldwide · 50+ countries</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4V6Zm0 0 8 7 8-7" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Email</p>
+                <a href="mailto:hello@arvion.com" class="mt-1 inline-block text-[14px] text-white transition-colors hover:text-slate-200">hello@arvion.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5c1.5 7 7 12.5 14 14l2.2-2.2a1.5 1.5 0 0 0-.1-2.2l-2.6-2a1.5 1.5 0 0 0-1.7 0l-1.1.8a11.2 11.2 0 0 1-5-5l.8-1.1a1.5 1.5 0 0 0 0-1.7l-2-2.6a1.5 1.5 0 0 0-2.2-.1L3.5 6.5Z" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Talk to us</p>
+                <p class="mt-1 text-[14px] text-white">Online, onsite, and hybrid programs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="assets/about/global.jpg"
+              alt="World map showing where Arvion delivers training"
+              class="footer-map"
+            />
+            <span class="absolute bottom-4 left-4 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-900 shadow-md">
+              Global trainer network
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10">
+        <p class="mx-auto max-w-7xl px-6 py-5 text-xs text-slate-400 lg:px-10">
+          © 2026 Arvion. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      toggle.addEventListener("click", () => {
+        const open = menu.classList.toggle("hidden") === false;
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        iconOpen.classList.toggle("hidden", open);
+        iconClose.classList.toggle("hidden", !open);
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        });
+      });
+
+      const logoTrack = document.getElementById("logo-track");
+      if (logoTrack && logoTrack.dataset.cloned !== "true") {
+        const originals = Array.from(logoTrack.children);
+        originals.forEach((card) => logoTrack.appendChild(card.cloneNode(true)));
+        logoTrack.dataset.cloned = "true";
+      }
+
+      const heroVideo = document.getElementById("hero-video");
+      if (heroVideo) {
+        heroVideo.muted = true;
+        heroVideo.defaultMuted = true;
+        heroVideo.setAttribute("muted", "");
+        const tryPlay = () => {
+          const playPromise = heroVideo.play();
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(() => {});
+          }
+        };
+        if (heroVideo.readyState >= 2) tryPlay();
+        else heroVideo.addEventListener("loadeddata", tryPlay, { once: true });
+        document.addEventListener("visibilitychange", () => {
+          if (!document.hidden && heroVideo.paused) tryPlay();
+        });
+      }
+
+      const intro = document.getElementById("intro-loader");
+      const introVideo = document.getElementById("intro-video");
+      const skipIntro = document.getElementById("skip-intro");
+      const INTRO_KEY = "arvion-intro-seen";
+      let introFinished = false;
+      let exitTimer;
+
+      const markIntroSeen = () => {
+        try {
+          localStorage.setItem(INTRO_KEY, "1");
+        } catch (e) {}
+      };
+
+      const finishIntro = () => {
+        if (introFinished || !intro) return;
+        introFinished = true;
+        clearTimeout(exitTimer);
+        markIntroSeen();
+        if (introVideo) {
+          introVideo.pause();
+        }
+        intro.classList.add("is-exiting");
+        document.body.classList.remove("intro-active");
+        window.setTimeout(() => intro.remove(), 750);
+        if (heroVideo) {
+          heroVideo.play().catch(() => {});
+        }
+      };
+
+      const showLogo = () => {
+        if (introFinished || !intro) return;
+        intro.classList.add("is-logo");
+        if (introVideo) {
+          introVideo.classList.add("is-hidden");
+        }
+        exitTimer = window.setTimeout(finishIntro, 1600);
+      };
+
+      const alreadySeen = (() => {
+        try {
+          return localStorage.getItem(INTRO_KEY) === "1";
+        } catch (e) {
+          return false;
+        }
+      })();
+
+      if (alreadySeen && intro) {
+        intro.remove();
+        document.body.classList.remove("intro-active");
+      } else if (intro && introVideo) {
+        introVideo.muted = true;
+        introVideo.defaultMuted = true;
+        introVideo.setAttribute("muted", "");
+        introVideo.play().catch(() => {});
+        introVideo.addEventListener("ended", showLogo);
+        skipIntro?.addEventListener("click", finishIntro);
+      } else if (intro) {
+        showLogo();
+      }
+    </script>
+  </body>
+</html>

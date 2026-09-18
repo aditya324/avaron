@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us — Arvion</title>
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-white font-sans antialiased text-navy-900">
+    <header class="sticky top-0 z-50 bg-white shadow-[0_1px_0_rgba(15,23,42,0.06)]">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-2 lg:px-10">
+        <a href="index.html" class="brand-logo-link shrink-0">
+          <img
+            src="assets/logo.png"
+            alt="Arvion — Learn. Lead. Transform."
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="hidden items-center gap-8 text-[15px] font-semibold text-navy-900 md:flex" aria-label="Primary">
+          <a href="index.html" class="transition-colors hover:text-navy-700">Home</a>
+          <a href="about.html" class="transition-colors hover:text-navy-700">About Us</a>
+          <a href="faq.html" class="transition-colors hover:text-navy-700">FAQ</a>
+          <a href="contact.html" class="underline decoration-2 underline-offset-[10px]">Contact</a>
+        </nav>
+
+        <a
+          href="mailto:hello@arvion.com"
+          class="hidden rounded-full bg-navy-800 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-navy-900/20 transition hover:bg-navy-700 md:inline-flex"
+        >
+          Enroll Now
+        </a>
+
+        <button
+          id="menu-toggle"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-navy-900 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white px-5 py-4 md:hidden">
+        <nav class="flex flex-col gap-3 text-sm font-semibold text-navy-900" aria-label="Mobile">
+          <a href="index.html" class="py-1">Home</a>
+          <a href="about.html" class="py-1">About Us</a>
+          <a href="faq.html" class="py-1">FAQ</a>
+          <a href="contact.html" class="py-1">Contact</a>
+          <a
+            href="mailto:hello@arvion.com"
+            class="mt-2 inline-flex items-center justify-center rounded-full bg-navy-800 px-6 py-2.5 text-white"
+          >
+            Enroll Now
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="bg-gradient-to-b from-[#eef4ff] to-white px-6 pb-10 pt-14 sm:pt-16" aria-labelledby="contact-heading">
+        <div class="mx-auto max-w-3xl text-center">
+          <h1 id="contact-heading" class="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+            Let's Connect &amp; Build Excellence Together
+          </h1>
+          <p class="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-slate-500">
+            We would love to hear from you. Whether you have questions about our programs, want to explore collaboration opportunities, or need guidance in selecting the right course, our team is ready to assist.
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-white px-6 pb-16 sm:pb-24">
+        <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+          <div class="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_8px_24px_rgba(15,23,42,0.04)] sm:p-8">
+            <h2 class="text-xl font-extrabold text-navy-900">Send us a Message</h2>
+
+            <form id="contact-form" class="mt-6 flex flex-col gap-5" novalidate>
+              <div>
+                <label for="full-name" class="mb-1.5 block text-sm font-medium text-slate-600">
+                  Full Name <span class="text-red-500">*</span>
+                </label>
+                <input
+                  id="full-name"
+                  name="name"
+                  type="text"
+                  required
+                  autocomplete="name"
+                  placeholder="Enter your full name"
+                  class="contact-input"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="mb-1.5 block text-sm font-medium text-slate-600">
+                  Email Address <span class="text-red-500">*</span>
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="Enter your email address"
+                  class="contact-input"
+                />
+              </div>
+
+              <div>
+                <label for="phone" class="mb-1.5 block text-sm font-medium text-slate-600">
+                  Contact Number <span class="font-normal text-slate-400">(Optional)</span>
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="Enter your phone number"
+                  class="contact-input"
+                />
+              </div>
+
+              <div>
+                <label for="subject" class="mb-1.5 block text-sm font-medium text-slate-600">
+                  Subject <span class="text-red-500">*</span>
+                </label>
+                <select id="subject" name="subject" required class="contact-input contact-select">
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Corporate Training">Corporate Training</option>
+                  <option value="Leadership Programs">Leadership Programs</option>
+                  <option value="Technology Training">Technology Training</option>
+                  <option value="Soft Skills">Soft Skills</option>
+                  <option value="Custom Program">Custom Program / Enroll</option>
+                  <option value="Become a Trainer">Become a Trainer</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="mb-1.5 block text-sm font-medium text-slate-600">
+                  Message <span class="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Tell us how we can help you..."
+                  class="contact-input resize-y min-h-[8rem]"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="mt-1 inline-flex w-full items-center justify-center rounded-xl bg-[#2f6bff] px-5 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#2f6bff]/25 transition hover:bg-[#2563eb]"
+              >
+                Send Message
+              </button>
+
+              <p id="form-status" class="hidden text-center text-sm font-medium text-emerald-600" role="status"></p>
+            </form>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-extrabold text-navy-900">Get in Touch</h2>
+            <p class="mt-3 text-[15px] leading-relaxed text-slate-500">
+              Ready to transform your skills and accelerate your career? Reach out to us through any of the following channels.
+            </p>
+
+            <ul class="mt-8 flex flex-col gap-5">
+              <li class="flex items-start gap-3.5">
+                <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#2f6bff] text-white">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" />
+                    <circle cx="12" cy="10" r="2.4" />
+                  </svg>
+                </span>
+                <p class="pt-2.5 text-[15px] text-navy-900">Training worldwide · 50+ countries</p>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#2f6bff] text-white">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4V6Zm0 0 8 7 8-7" />
+                  </svg>
+                </span>
+                <a href="mailto:hello@arvion.com" class="pt-2.5 text-[15px] font-medium text-[#2f6bff] transition hover:text-[#2563eb]">
+                  hello@arvion.com
+                </a>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#2f6bff] text-white">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5c1.5 7 7 12.5 14 14l2.2-2.2a1.5 1.5 0 0 0-.1-2.2l-2.6-2a1.5 1.5 0 0 0-1.7 0l-1.1.8a11.2 11.2 0 0 1-5-5l.8-1.1a1.5 1.5 0 0 0 0-1.7l-2-2.6a1.5 1.5 0 0 0-2.2-.1L3.5 6.5Z" />
+                  </svg>
+                </span>
+                <p class="pt-2.5 text-[15px] text-navy-900">Online, onsite, and hybrid programs</p>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#2f6bff] text-white">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2" />
+                    <circle cx="12" cy="12" r="9" />
+                  </svg>
+                </span>
+                <p class="pt-2.5 text-[15px] text-navy-900">24/7 Global Support. Available worldwide, anytime.</p>
+              </li>
+            </ul>
+
+            <div class="mt-10 overflow-hidden rounded-2xl bg-[#f1f5f9] p-3">
+              <p class="mb-2 px-1 text-sm font-semibold text-navy-900">Our Reach</p>
+              <div class="relative overflow-hidden rounded-xl">
+                <img
+                  src="assets/about/global.jpg"
+                  alt="World map showing Arvion's global training presence"
+                  class="contact-map"
+                />
+                <span class="absolute bottom-3 left-3 rounded-full bg-white px-3.5 py-1.5 text-xs font-semibold text-navy-900 shadow-md">
+                  Global trainer network · 50+ countries
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#15284d] text-white">
+      <div class="mx-auto max-w-7xl px-6 pt-16 pb-10 lg:px-10">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.7fr_0.95fr_0.7fr] lg:gap-8">
+          <div>
+            <a href="index.html" class="inline-flex rounded-2xl bg-white px-3 py-2">
+              <img src="assets/logo.png" alt="Arvion" class="footer-logo" />
+            </a>
+            <p class="mt-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#c9a227]">
+              Learn. Lead. Transform.
+            </p>
+            <p class="mt-4 max-w-xs text-[14px] leading-relaxed text-slate-300">
+              Empowering professionals and organizations with transformative learning experiences. We bridge skill gaps globally through world-class training and innovative solutions.
+            </p>
+          </div>
+
+          <nav aria-label="Company">
+            <p class="text-sm font-semibold text-white">Company</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
+              <li><a href="about.html" class="transition-colors hover:text-white">About Us</a></li>
+              <li><a href="about.html#mission" class="transition-colors hover:text-white">Our Mission</a></li>
+              <li><a href="about.html#values" class="transition-colors hover:text-white">Our Values</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Programs">
+            <p class="text-sm font-semibold text-white">Programs</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="index.html#corporate" class="transition-colors hover:text-white">Corporate Training</a></li>
+              <li><a href="index.html#leadership" class="transition-colors hover:text-white">Leadership Programs</a></li>
+              <li><a href="index.html#technology" class="transition-colors hover:text-white">Technology Training</a></li>
+              <li><a href="index.html#soft-skills" class="transition-colors hover:text-white">Soft Skills</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Support">
+            <p class="text-sm font-semibold text-white">Support</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="faq.html" class="transition-colors hover:text-white">FAQ</a></li>
+              <li><a href="contact.html" class="transition-colors hover:text-white">Contact Us</a></li>
+              <li><a href="mailto:hello@arvion.com" class="transition-colors hover:text-white">Enroll Now</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="mt-12 overflow-hidden rounded-[1.5rem] bg-[#1c335f] lg:grid lg:grid-cols-[0.95fr_1.15fr]">
+          <div class="flex flex-col justify-center gap-6 px-6 py-7 sm:px-8">
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" />
+                  <circle cx="12" cy="10" r="2.4" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Location</p>
+                <p class="mt-1 text-[14px] text-white">Training worldwide · 50+ countries</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4V6Zm0 0 8 7 8-7" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Email</p>
+                <a href="mailto:hello@arvion.com" class="mt-1 inline-block text-[14px] text-white transition-colors hover:text-slate-200">hello@arvion.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5c1.5 7 7 12.5 14 14l2.2-2.2a1.5 1.5 0 0 0-.1-2.2l-2.6-2a1.5 1.5 0 0 0-1.7 0l-1.1.8a11.2 11.2 0 0 1-5-5l.8-1.1a1.5 1.5 0 0 0 0-1.7l-2-2.6a1.5 1.5 0 0 0-2.2-.1L3.5 6.5Z" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Talk to us</p>
+                <p class="mt-1 text-[14px] text-white">Online, onsite, and hybrid programs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="assets/about/global.jpg"
+              alt="World map showing where Arvion delivers training"
+              class="footer-map"
+            />
+            <span class="absolute bottom-4 left-4 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-900 shadow-md">
+              Global trainer network
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10">
+        <p class="mx-auto max-w-7xl px-6 py-5 text-xs text-slate-400 lg:px-10">
+          © 2026 Arvion. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      toggle.addEventListener("click", () => {
+        const open = menu.classList.toggle("hidden") === false;
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        iconOpen.classList.toggle("hidden", open);
+        iconClose.classList.toggle("hidden", !open);
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        });
+      });
+
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const phone = form.phone.value.trim();
+        const subject = form.subject.value;
+        const message = form.message.value.trim();
+
+        const body = [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          phone ? `Phone: ${phone}` : null,
+          "",
+          message,
+        ]
+          .filter(Boolean)
+          .join("\n");
+
+        window.location.href =
+          "mailto:hello@arvion.com?subject=" +
+          encodeURIComponent(`[Arvion] ${subject}`) +
+          "&body=" +
+          encodeURIComponent(body);
+
+        status.textContent = "Opening your email app — thank you for reaching out.";
+        status.classList.remove("hidden");
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

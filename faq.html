@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ — Arvion</title>
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-white font-sans antialiased text-navy-900">
+    <header class="sticky top-0 z-50 bg-white shadow-[0_1px_0_rgba(15,23,42,0.06)]">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-2 lg:px-10">
+        <a href="index.html" class="brand-logo-link shrink-0">
+          <img
+            src="assets/logo.png"
+            alt="Arvion — Learn. Lead. Transform."
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="hidden items-center gap-8 text-[15px] font-semibold text-navy-900 md:flex" aria-label="Primary">
+          <a href="index.html" class="transition-colors hover:text-navy-700">Home</a>
+          <a href="about.html" class="transition-colors hover:text-navy-700">About Us</a>
+          <a href="faq.html" class="underline decoration-2 underline-offset-[10px]">FAQ</a>
+          <a href="contact.html" class="transition-colors hover:text-navy-700">Contact</a>
+        </nav>
+
+        <a
+          href="mailto:hello@arvion.com"
+          class="hidden rounded-full bg-navy-800 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-navy-900/20 transition hover:bg-navy-700 md:inline-flex"
+        >
+          Enroll Now
+        </a>
+
+        <button
+          id="menu-toggle"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-navy-900 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-slate-100 bg-white px-5 py-4 md:hidden">
+        <nav class="flex flex-col gap-3 text-sm font-semibold text-navy-900" aria-label="Mobile">
+          <a href="index.html" class="py-1">Home</a>
+          <a href="about.html" class="py-1">About Us</a>
+          <a href="faq.html" class="py-1">FAQ</a>
+          <a href="contact.html" class="py-1">Contact</a>
+          <a
+            href="mailto:hello@arvion.com"
+            class="mt-2 inline-flex items-center justify-center rounded-full bg-navy-800 px-6 py-2.5 text-white"
+          >
+            Enroll Now
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="bg-gradient-to-b from-[#eef4ff] to-white px-6 pb-8 pt-14 sm:pt-16" aria-labelledby="faq-page-heading">
+        <div class="mx-auto max-w-3xl text-center">
+          <h1 id="faq-page-heading" class="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+            Frequently Asked Questions
+          </h1>
+          <p class="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-slate-500">
+            Find answers to common questions about our training programs, enrollment process, and what makes Arvion unique.
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-white px-6 pb-16 sm:pb-24" aria-label="FAQ list">
+        <div class="mx-auto max-w-3xl">
+          <div class="flex flex-col gap-3">
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                Can I cancel my booking and get a refund?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Yes. Programs can be rescheduled with at least 7 days' notice. Cancellations more than 14 days before the start date are eligible for a full refund; later cancellations may receive credit toward a future program. Terms are confirmed in your agreement.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                How long does it take to receive my refund?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Once approved, refunds are typically processed within 7–14 business days, depending on your payment method and bank. We will confirm by email when the refund has been initiated.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                What happens if Arvion cancels the service or event?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                If we need to cancel a session, you can choose a full refund or reschedule at no extra cost. We will notify you as soon as possible and help you pick a new date that works for your team.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                What kind of training does Arvion provide?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Arvion offers Corporate Training, Leadership Programs, Technology Training, and Soft Skills development. Each track can be tailored to your industry, team size, and goals.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                Do you provide certificates?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Yes. Participants receive a certificate of completion after finishing a program. Self-certified learning credits are available; formal accreditation is in progress.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                Can I join as a trainer?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                We welcome experienced industry professionals and educators. Email hello@arvion.com with your background and specialties, and our team will follow up about joining the Arvion trainer network.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                How do I register for a course?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Click Enroll Now or Contact Us, or email hello@arvion.com. We will help you choose a track, scope a custom program if needed, and schedule delivery for your team.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                Are your courses customizable for organizations?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Yes. We design programs around your specific goals, industry requirements, and employee skill needs — including custom content, flexible delivery, and onsite or virtual formats.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                What is the duration of your training programs?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Most workshops run from one intensive day to several weeks. Duration depends on the topic, cohort size, and whether you want a short sprint or a longer learning path.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                Do you offer training for beginners as well as advanced learners?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Yes. Programs are leveled for beginners through advanced practitioners. We assess your team's starting point and tailor depth, pace, and examples so everyone can progress.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                What delivery methods do you use?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Sessions are available in person, virtually, or as a hybrid. Your team can learn together in one office or across locations, with the same practical, hands-on approach.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                How soon can I start after enrolling?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Timing depends on program type and trainer availability. Many standard workshops can start within a few weeks; custom corporate programs are scheduled after a short discovery call.
+              </p>
+            </details>
+
+            <details class="faq-item group rounded-2xl bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-slate-100/80">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-[15px] font-semibold text-navy-900">
+                Do you offer any post-training support?
+                <svg class="h-5 w-5 shrink-0 text-slate-400 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-[14px] leading-relaxed text-slate-500">
+                Yes. Many programs include follow-up resources, check-ins, or coaching so learning sticks on the job. Ask about post-training options when you enroll — we will match support to your goals.
+              </p>
+            </details>
+          </div>
+
+          <div class="mt-10 rounded-[1.75rem] bg-gradient-to-r from-[#2f6bff] to-[#7b4dff] px-6 py-10 text-center text-white">
+            <h2 class="text-xl font-extrabold">Still Have Questions?</h2>
+            <p class="mx-auto mt-2 max-w-lg text-[14px] leading-relaxed text-white/85">
+              Can't find the answer you're looking for? Our support team is here to help you with any specific questions about our training programs.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="contact.html"
+                class="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-navy-900 shadow-md transition hover:bg-slate-100"
+              >
+                Contact Us
+              </a>
+              <a
+                href="mailto:hello@arvion.com"
+                class="inline-flex items-center justify-center rounded-full border border-white/80 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Send Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#15284d] text-white">
+      <div class="mx-auto max-w-7xl px-6 pt-16 pb-10 lg:px-10">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.7fr_0.95fr_0.7fr] lg:gap-8">
+          <div>
+            <a href="index.html" class="inline-flex rounded-2xl bg-white px-3 py-2">
+              <img src="assets/logo.png" alt="Arvion" class="footer-logo" />
+            </a>
+            <p class="mt-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#c9a227]">
+              Learn. Lead. Transform.
+            </p>
+            <p class="mt-4 max-w-xs text-[14px] leading-relaxed text-slate-300">
+              Empowering professionals and organizations with transformative learning experiences. We bridge skill gaps globally through world-class training and innovative solutions.
+            </p>
+          </div>
+
+          <nav aria-label="Company">
+            <p class="text-sm font-semibold text-white">Company</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
+              <li><a href="about.html" class="transition-colors hover:text-white">About Us</a></li>
+              <li><a href="about.html#mission" class="transition-colors hover:text-white">Our Mission</a></li>
+              <li><a href="about.html#values" class="transition-colors hover:text-white">Our Values</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Programs">
+            <p class="text-sm font-semibold text-white">Programs</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="index.html#corporate" class="transition-colors hover:text-white">Corporate Training</a></li>
+              <li><a href="index.html#leadership" class="transition-colors hover:text-white">Leadership Programs</a></li>
+              <li><a href="index.html#technology" class="transition-colors hover:text-white">Technology Training</a></li>
+              <li><a href="index.html#soft-skills" class="transition-colors hover:text-white">Soft Skills</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Support">
+            <p class="text-sm font-semibold text-white">Support</p>
+            <ul class="mt-4 flex flex-col gap-2.5 text-[14px] text-slate-300">
+              <li><a href="faq.html" class="transition-colors hover:text-white">FAQ</a></li>
+              <li><a href="contact.html" class="transition-colors hover:text-white">Contact Us</a></li>
+              <li><a href="mailto:hello@arvion.com" class="transition-colors hover:text-white">Enroll Now</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="mt-12 overflow-hidden rounded-[1.5rem] bg-[#1c335f] lg:grid lg:grid-cols-[0.95fr_1.15fr]">
+          <div class="flex flex-col justify-center gap-6 px-6 py-7 sm:px-8">
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" />
+                  <circle cx="12" cy="10" r="2.4" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Location</p>
+                <p class="mt-1 text-[14px] text-white">Training worldwide · 50+ countries</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4V6Zm0 0 8 7 8-7" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Email</p>
+                <a href="mailto:hello@arvion.com" class="mt-1 inline-block text-[14px] text-white transition-colors hover:text-slate-200">hello@arvion.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#6d8ec4]">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5c1.5 7 7 12.5 14 14l2.2-2.2a1.5 1.5 0 0 0-.1-2.2l-2.6-2a1.5 1.5 0 0 0-1.7 0l-1.1.8a11.2 11.2 0 0 1-5-5l.8-1.1a1.5 1.5 0 0 0 0-1.7l-2-2.6a1.5 1.5 0 0 0-2.2-.1L3.5 6.5Z" />
+                </svg>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wide text-[#9eb4d8]">Talk to us</p>
+                <p class="mt-1 text-[14px] text-white">Online, onsite, and hybrid programs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="assets/about/global.jpg"
+              alt="World map showing where Arvion delivers training"
+              class="footer-map"
+            />
+            <span class="absolute bottom-4 left-4 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-900 shadow-md">
+              Global trainer network
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10">
+        <p class="mx-auto max-w-7xl px-6 py-5 text-xs text-slate-400 lg:px-10">
+          © 2026 Arvion. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      toggle.addEventListener("click", () => {
+        const open = menu.classList.toggle("hidden") === false;
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        iconOpen.classList.toggle("hidden", open);
+        iconClose.classList.toggle("hidden", !open);
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          toggle.setAttribute("aria-expanded", "false");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
