@@ -1,0 +1,12 @@
+# Wrangler uploads the Pages output directory as public assets.
+# Keep build tooling out of the upload — workerd alone is ~127 MiB.
+node_modules/
+.git/
+.wrangler/
+
+# Tailwind source; compiled CSS lives in /css
+src/
+
+package.json
+package-lock.json
+.gitignore
